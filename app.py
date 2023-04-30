@@ -20,8 +20,8 @@ from Scraper.Scraper import *
 
 
 tfvect = TfidfVectorizer(stop_words="english", max_df=0.7)
-loaded_model = pickle.load(open("Group24_IT314_Lab4-master/model.pkl", "rb"))
-dataframe = pd.read_csv("Group24_IT314_Lab4-master/news.csv")
+loaded_model = pickle.load(open("model.pkl", "rb"))
+dataframe = pd.read_csv("news.csv")
 x = dataframe["text"]
 y = dataframe["label"]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
